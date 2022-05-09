@@ -15,7 +15,6 @@ function Deck.create()
 end
 
 
-
 function Deck:blankSlate()
     self.Current = copy(_defaultDeck)
     self._previousCards = {}
