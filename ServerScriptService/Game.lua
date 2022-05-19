@@ -12,6 +12,9 @@ function Game.create()
     self._Hands = {} -- what the players currently have in their hands
     self._gameType = "MAIN"
     self._event = nil
+    self._server = {}
+
+    return self
 end
 
 
@@ -25,7 +28,9 @@ Game:_onPlayerLeave()
 
 Game:_onGameEnd()
 
--- default helper functions args(player, true) > 2nd arg if in self.Players
+Game:_endGameCheck()
+
+-- default helper functions args(player, true) -> 2nd arg if in self.Players
 Game:_isPlayer()
 
 return Game
